@@ -3,6 +3,7 @@
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Application;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TopicController;
 
 /*
@@ -26,6 +27,9 @@ Route::get('/', function () {
 });
 
 Route::get('/topics/', [TopicController::class, 'index'])->name('topics.index');
+
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

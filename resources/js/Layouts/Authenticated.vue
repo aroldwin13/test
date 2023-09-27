@@ -6,7 +6,7 @@ import BreezeDropdownLink from '@/Components/DropdownLink.vue';
 import BreezeNavLink from '@/Components/NavLink.vue';
 import BreezeResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
 import { Link } from '@inertiajs/inertia-vue3';
-
+import BreezeWin from '@/Components/Checkbox.vue';
 const showingNavigationDropdown = ref(false);
 </script>
 
@@ -23,6 +23,7 @@ const showingNavigationDropdown = ref(false);
                                 <Link :href="route('dashboard')">
                                     <BreezeApplicationLogo class="block h-9 w-auto" />
                                 </Link>
+                               
                             </div>
 
                             <!-- Navigation Links -->
@@ -32,6 +33,9 @@ const showingNavigationDropdown = ref(false);
                                 </BreezeNavLink>
                                 <BreezeNavLink :href="route('topics.index')" :active="route().current('topics.index')">
                                     Topics
+                                </BreezeNavLink>
+                                <BreezeNavLink :href="route('home')" :active="route().current('home')">
+                                    About
                                 </BreezeNavLink>
                             </div>
                         </div>
